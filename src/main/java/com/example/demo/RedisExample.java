@@ -8,11 +8,10 @@ public class RedisExample {
 	
     public void execute(int i) {
         Jedis jedis = new Jedis("localhost", 6379); // Endereço e porta do Redis
-        jedis.set(CHAVE, "VALOR ARMAZENAMENTO CHAVE X VALOR - " + "{id: " + i + ", nome: JOSÉ, CPF: 2092934848}");
+        jedis.set(CHAVE, "============>" + System.currentTimeMillis());
         
-        String resultado = jedis.get(CHAVE).split("-")[1];
-        
-        System.out.println(">>>>> VALOR RECEBIDO: " + resultado);
+        System.out.println(">>>>> VALOR ENVIADO: " + System.currentTimeMillis());
+        System.out.println(">>>>> VALOR RECEBIDO: " + jedis.get(CHAVE));
         
         jedis.close();
     }
