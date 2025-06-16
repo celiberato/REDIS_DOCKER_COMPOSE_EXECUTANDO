@@ -12,6 +12,10 @@ public class RedisExample {
         
         String resultado = jedis.get(CHAVE);
         
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("{id: 01, nome: JOSÉ, CPF: 2092934848}");
+        
         System.out.println("VALOR ARMAZENADO: " + resultado);
         
         jedis.close();
