@@ -9,8 +9,14 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		
-		new RedisExample().execute();
+		
+		for(int i=0; i<100; i++) {
+			new RedisExample().execute();
+		}
 
+		
+		
+		
 //		new RedissonExample().execute();
 	}
 
