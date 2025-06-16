@@ -11,7 +11,7 @@ public class DemoApplication {
 		
 		
 		for(int i=0; i<100; i++) {
-			new RedisExample().execute();
+			new RedisExample().execute(i);
 		}
 
 		
