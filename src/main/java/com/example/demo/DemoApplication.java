@@ -11,7 +11,7 @@ public class DemoApplication {
 		
 		new RedisExample().execute();
 
-		new RedissonExample().execute();
+//		new RedissonExample().execute();
 	}
 
 }

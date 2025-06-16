@@ -3,11 +3,17 @@ package com.example.demo;
 import redis.clients.jedis.Jedis;
 
 public class RedisExample {
+	
+	public static final String CHAVE = "chave";
+	
     public void execute() {
         Jedis jedis = new Jedis("localhost", 6379); // Endereço e porta do Redis
-        jedis.set("chave", "valor");
-        String valor = jedis.get("chave");
-        System.out.println("Valor obtido: " + valor);
+        jedis.set(CHAVE, "ISTO É UM TESTE DE ARMAZENAMENTO CHAVE X VALOR - " + System.currentTimeMillis());
+        
+        String resultado = jedis.get(CHAVE);
+        
+        System.out.println("VALOR ARMAZENADO: " + resultado);
+        
         jedis.close();
     }
 }
